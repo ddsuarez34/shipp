@@ -24,8 +24,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="r3M-J5-nK2">
                                 <rect key="frame" x="86" y="274.33333333333337" width="258" height="323.33333333333337"/>
                                 <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lAh-8l-GIh">
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="102"/>
+                                        <segments>
+                                            <segment title="SIGN IN"/>
+                                            <segment title="SIGN UP"/>
+                                        </segments>
+                                    </segmentedControl>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5L-aY-8db">
-                                        <rect key="frame" x="0.0" y="0.0" width="258" height="175"/>
+                                        <rect key="frame" x="0.0" y="141" width="258" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -51,14 +58,6 @@
                                     <constraint firstItem="zbn-Lx-ge1" firstAttribute="top" secondItem="HNT-73-61I" secondAttribute="bottom" constant="60" id="4zI-Hw-YwA"/>
                                 </constraints>
                             </stackView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lAh-8l-GIh">
-                                <rect key="frame" x="74" y="193" width="258" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="SIGN IN"/>
-                                    <segment title="SIGN UP"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
