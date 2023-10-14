@@ -13,15 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        let font = UIFont(name: "Arial", size: 14);
-        let normalTextAttributes: [NSAttributedString.Key: Any] = [
-            .font: font
-        ];
-        
-        tabs.setTitleTextAttributes(normalTextAttributes, for: .normal);
-        
-        
         // Tabs Font color
         let selectedFontColor = UIColor.white
         let unselectedFontColor = UIColor.white
@@ -35,13 +26,13 @@ class ViewController: UIViewController {
         
         tabs.setTitleTextAttributes(selectedAttributes, for: .selected)
         tabs.setTitleTextAttributes(unselectedAttributes, for: .normal)
-        
-        // Tabs Background color
-        let selectedBackgroundColor = UIImage(color: .blue)  // A utility extension, see below.
-        let unselectedBackgroundColor = UIImage(color: .gray) // A utility extension, see below.
-
-        tabs.setBackgroundImage(selectedBackgroundColor, for: .selected, barMetrics: .default)
-        tabs.setBackgroundImage(unselectedBackgroundColor, for: .normal, barMetrics: .default)
+//        
+//        // Tabs Background color
+//        let selectedBackgroundColor = UIImage(color: .blue)  // A utility extension, see below.
+//        let unselectedBackgroundColor = UIImage(color: .gray) // A utility extension, see below.
+//
+//        tabs.setBackgroundImage(selectedBackgroundColor, for: .selected, barMetrics: .default)
+//        tabs.setBackgroundImage(unselectedBackgroundColor, for: .normal, barMetrics: .default)
 
     }
 
