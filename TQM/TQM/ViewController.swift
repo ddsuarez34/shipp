@@ -13,7 +13,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
-
+        signInStack.isHidden = false;
+        signUpStack.isHidden = true;
+        pickedImageView.isHidden = false;
     }
     
     // Tabs
@@ -34,6 +36,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let imagePicker = UIImagePickerController()
     
     
+    @IBAction func onCameraBtnClick(_ sender: Any) {
+        openCamera()
+    }
+    
+    @IBAction func onGallerybtnClick(_ sender: Any) {
+        openGallery();
+    }
     func openCamera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
@@ -51,7 +60,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             // Use the pickedImage
-            // For example: imageView.image = pickedImage
+            pickedImageView.image = pickedImage
+            pickedImageView.isHidden = false
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -59,6 +69,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBOutlet var pickedImageView: UIImageView!
 }
 
 
