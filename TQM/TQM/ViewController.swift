@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
     }
+    
+    // Tabs
     @IBAction func onSignUpTabClick(_ sender: Any) {
         signInStack.isHidden = true;
         signUpStack.isHidden = false;
@@ -26,4 +28,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var signUpStack: UIStackView!
     @IBOutlet var signInStack: UIStackView!
+    
+    // Image picker
+    let imagePicker = UIImagePickerController()
+
 }
