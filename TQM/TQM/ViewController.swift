@@ -9,29 +9,20 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var hideshow: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
-        signInStack.isHidden = false;
-        signUpStack.isHidden = true;
-        pickedImageView.isHidden = false;
+        hideshow.isHidden = true
     }
     
     // Tabs
     @IBAction func onSignUpTabClick(_ sender: Any) {
-        signInStack.isHidden = true;
-        signUpStack.isHidden = false;
-
+        hideshow.isHidden = !hideshow.isHidden
     }
-    @IBAction func onSignInTabClick(_ sender: Any) {
-        signInStack.isHidden = false;
-        signUpStack.isHidden = true;
-    }
-    
-    @IBOutlet var signUpStack: UIStackView!
-    @IBOutlet var signInStack: UIStackView!
-    
+        
     // Image picker
     let imagePicker = UIImagePickerController()
     
@@ -43,6 +34,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func onGallerybtnClick(_ sender: Any) {
         openGallery();
     }
+    
     func openCamera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
@@ -58,10 +50,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+            let imageView = pickedImageView {
             // Use the pickedImage
-            pickedImageView.image = pickedImage
-            pickedImageView.isHidden = false
+            imageView.image = pickedImage
+            imageView.isHidden = false
+            print("Image was picked")
+            
+            // Set aspect ratio constraint
+                    let aspectRatio = pickedImage.size.height / pickedImage.size.width
+                    let aspectRatioConstraint = NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .width, multiplier: aspectRatio, constant: 0)
+                    NSLayoutConstraint.activate([aspectRatioConstraint])
         }
         picker.dismiss(animated: true, completion: nil)
     }
