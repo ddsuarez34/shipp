@@ -21,7 +21,7 @@
 		6FB2E7A02ADBB1EE00790D2D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6FB2E79F2ADBB1EE00790D2D /* FirebaseFirestoreSwift */; };
 		6FB2E7A22ADBB1EE00790D2D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6FB2E7A12ADBB1EE00790D2D /* FirebaseFunctions */; };
 		6FB2E7A42ADBB1EE00790D2D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FB2E7A32ADBB1EE00790D2D /* FirebaseStorage */; };
-		6FC0EE722ADBAE0F00212D86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0EE712ADBAE0F00212D86 /* GoogleService-Info.plist */; };
+		6FB2E7A62ADBB7E400790D2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E7A52ADBB7E400790D2D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		6F0F06662ADA541500B1F598 /* TQMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TQMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0F066A2ADA541500B1F598 /* TQMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TQMUITests.swift; sourceTree = "<group>"; };
 		6F0F066C2ADA541500B1F598 /* TQMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TQMUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6FC0EE712ADBAE0F00212D86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FB2E7A52ADBB7E400790D2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +111,7 @@
 		6F0F06482ADA541400B1F598 /* TQM */ = {
 			isa = PBXGroup;
 			children = (
+				6FB2E7A52ADBB7E400790D2D /* GoogleService-Info.plist */,
 				6FC0EE742ADBB0B200212D86 /* Model */,
 				6F0F06492ADA541400B1F598 /* AppDelegate.swift */,
 				6F0F064B2ADA541400B1F598 /* SceneDelegate.swift */,
@@ -119,7 +120,6 @@
 				6F0F06522ADA541500B1F598 /* Assets.xcassets */,
 				6F0F06542ADA541500B1F598 /* LaunchScreen.storyboard */,
 				6F0F06572ADA541500B1F598 /* Info.plist */,
-				6FC0EE712ADBAE0F00212D86 /* GoogleService-Info.plist */,
 			);
 			path = TQM;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0F06562ADA541500B1F598 /* LaunchScreen.storyboard in Resources */,
-				6FC0EE722ADBAE0F00212D86 /* GoogleService-Info.plist in Resources */,
+				6FB2E7A62ADBB7E400790D2D /* GoogleService-Info.plist in Resources */,
 				6F0F06532ADA541500B1F598 /* Assets.xcassets in Resources */,
 				6F0F06512ADA541400B1F598 /* Main.storyboard in Resources */,
 			);
