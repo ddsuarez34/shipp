@@ -22,6 +22,8 @@
 		6FB2E7A22ADBB1EE00790D2D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6FB2E7A12ADBB1EE00790D2D /* FirebaseFunctions */; };
 		6FB2E7A42ADBB1EE00790D2D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FB2E7A32ADBB1EE00790D2D /* FirebaseStorage */; };
 		6FB2E7A62ADBB7E400790D2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E7A52ADBB7E400790D2D /* GoogleService-Info.plist */; };
+		6FB2E7A82ADBB90B00790D2D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB2E7A72ADBB90B00790D2D /* FirebaseAuthManager.swift */; };
+		6FB2E7AB2ADBB95600790D2D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB2E7AA2ADBB95600790D2D /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		6F0F066A2ADA541500B1F598 /* TQMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TQMUITests.swift; sourceTree = "<group>"; };
 		6F0F066C2ADA541500B1F598 /* TQMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TQMUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6FB2E7A52ADBB7E400790D2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FB2E7A72ADBB90B00790D2D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		6FB2E7AA2ADBB95600790D2D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		6F0F06482ADA541400B1F598 /* TQM */ = {
 			isa = PBXGroup;
 			children = (
+				6FB2E7A92ADBB94400790D2D /* Controller */,
 				6FB2E7A52ADBB7E400790D2D /* GoogleService-Info.plist */,
 				6FC0EE742ADBB0B200212D86 /* Model */,
 				6F0F06492ADA541400B1F598 /* AppDelegate.swift */,
@@ -141,9 +146,18 @@
 			path = TQMUITests;
 			sourceTree = "<group>";
 		};
+		6FB2E7A92ADBB94400790D2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FB2E7AA2ADBB95600790D2D /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6FC0EE742ADBB0B200212D86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6FB2E7A72ADBB90B00790D2D /* FirebaseAuthManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,7 +306,9 @@
 			files = (
 				6F0F064E2ADA541400B1F598 /* ViewController.swift in Sources */,
 				6F0F064A2ADA541400B1F598 /* AppDelegate.swift in Sources */,
+				6FB2E7A82ADBB90B00790D2D /* FirebaseAuthManager.swift in Sources */,
 				6F0F064C2ADA541400B1F598 /* SceneDelegate.swift in Sources */,
+				6FB2E7AB2ADBB95600790D2D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -117,6 +117,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWu-gt-sE1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -137,7 +140,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="pgX-og-gUE" id="J8E-7Y-uLw"/>
                         <outlet property="hideshow" destination="hq8-wZ-O1k" id="KfH-pQ-Fqv"/>
+                        <outlet property="passwordTextField" destination="Ugl-aL-3sq" id="qmv-WN-IcT"/>
                         <outlet property="pickedImageView" destination="iuJ-TQ-IiB" id="tCo-hn-IEb"/>
                     </connections>
                 </viewController>
