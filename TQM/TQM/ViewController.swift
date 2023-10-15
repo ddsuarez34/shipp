@@ -16,13 +16,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         signInStack.isHidden = false;
         signUpStack.isHidden = true;
         pickedImageView.isHidden = false;
+        
+        
+        pickedImageView.alpha = 0.1
+        pickedImageView.backgroundColor = UIColor.clear
     }
     
     // Tabs
     @IBAction func onSignUpTabClick(_ sender: Any) {
         signInStack.isHidden = true;
         signUpStack.isHidden = false;
-
     }
     @IBAction func onSignInTabClick(_ sender: Any) {
         signInStack.isHidden = false;
@@ -62,6 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             // Use the pickedImage
             pickedImageView.image = pickedImage
             pickedImageView.isHidden = false
+            print("Image was picked")
         }
         picker.dismiss(animated: true, completion: nil)
     }
