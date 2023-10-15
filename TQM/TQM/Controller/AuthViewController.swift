@@ -43,6 +43,7 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 // Successfully signed up
                 // Navigate to next screen or show success message
                 print("Success!")
+                self.performSegue(withIdentifier: "SubmitToEvents", sender: self)
             } else {
                 // Handle error
                 if let error = error {
@@ -64,7 +65,7 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     // Successfully logged in
                     // Navigate to the main app screen or show a success message
                     print("Success!")
-
+                    self.performSegue(withIdentifier: "SubmitToEvents", sender: self)
                 } else {
                     // Handle error
                     if let error = error {
