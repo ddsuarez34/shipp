@@ -11,6 +11,8 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var pickedImageView: UIImageView!
+
     var isSignIn: Bool = true
     
     
@@ -38,18 +40,22 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         
-        FirebaseAuthManager.shared.signUp(email: email, password: password) { (success, error) in
-            if success {
-                // Successfully signed up
-                // Navigate to next screen or show success message
-                print("Success!")
-                self.performSegue(withIdentifier: "SubmitToEvents", sender: self)
-            } else {
-                // Handle error
-                if let error = error {
-                    print("Error signing up: \(error.localizedDescription)")
+        if let imageToUpload = pickedImageView.image {
+            FirebaseAuthManager.shared.signUp(email: email, password: password, image: imageToUpload) { (success, error) in
+                if success {
+                    // Successfully signed up
+                    // Navigate to next screen or show success message
+                    print("Success!")
+                    self.performSegue(withIdentifier: "SubmitToEvents", sender: self)
+                } else {
+                    // Handle error
+                    if let error = error {
+                        print("Error signing up: \(error.localizedDescription)")
+                    }
                 }
             }
+        } else {
+            print("No image to upload")
         }
     }
     
@@ -170,7 +176,6 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     
-    @IBOutlet var pickedImageView: UIImageView!
 }
 
 

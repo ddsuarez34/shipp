@@ -53,54 +53,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "53DC5398-387E-4357-8E5C-44AD91075CF1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TQM/Controller/AuthViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "openGallery()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "53DC5398-387E-4357-8E5C-44AD91075CF1 - 1a355e8e5d13f111"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TQM.AuthViewController.openGallery() -&gt; ()"
-                  moduleName = "TQM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "53DC5398-387E-4357-8E5C-44AD91075CF1 - 1a355e8e5d13f111"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TQM.AuthViewController.openGallery() -&gt; ()"
-                  moduleName = "TQM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9BFAA93B-4BCA-4134-8304-B8768A9FACB0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -108,8 +60,8 @@
             filePath = "TQM/Controller/AuthViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "submitBtnOnClick(_:)"
             landmarkType = "7">
             <Locations>
@@ -156,8 +108,8 @@
             filePath = "TQM/Controller/AuthViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "submitBtnOnClick(_:)"
             landmarkType = "7">
             <Locations>

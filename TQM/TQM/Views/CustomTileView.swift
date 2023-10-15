@@ -42,7 +42,6 @@ class CustomTileView: UIView {
     private func setupViews() {
         addSubview(imageView)
         addSubview(likesLabel)
-        self.backgroundColor = .red
 
         // Layout using AutoLayout
         setupConstraints()
