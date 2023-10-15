@@ -7,22 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    // FirebaseAuthManager instance
-    let authManager = FirebaseAuthManager()
     
     // Action for Sign Up button
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         
-        authManager.signUp(email: email, password: password) { (success, error) in
+        FirebaseAuthManager.shared.signUp(email: email, password: password) { (success, error) in
             if success {
                 // Successfully signed up
                 // Navigate to next screen or show success message
+                print("Success!")
             } else {
                 // Handle error
                 if let error = error {
