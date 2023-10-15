@@ -17,6 +17,10 @@ class FirebaseAuthManager {
     
     private init() {}
     
+    func getCurrentUserID() -> String? {
+          return Auth.auth().currentUser?.uid
+      }
+    
     // Sign Up User
     func signUp(email: String, password: String, image: UIImage, completion: @escaping (Bool, Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in

@@ -8,7 +8,6 @@ class CustomTileView: UIView {
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.image = #imageLiteral(resourceName: "selfie")
         return iv
     }()
     

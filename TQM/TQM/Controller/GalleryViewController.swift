@@ -16,6 +16,9 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         print("GalleryViewController loaded!")
 
+        let uid = FirebaseAuthManager.shared.getCurrentUserID()
+        let imagePath = "/profile_images/\(uid ?? "unknown").jpg"
+        print(imagePath)
         for _ in 0..<9 {
             let customImageView = CustomTileView()
             customImageView.imageView.image = #imageLiteral(resourceName: "selfie")
@@ -23,6 +26,9 @@ class GalleryViewController: UIViewController {
             customImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
             customImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
             customImageViews.append(customImageView)
+            FirebaseStorageManager.shared.downloadImage(from: imagePath) { image in
+                customImageView.imageView.image = image
+            }
         }
         
         // Create a vertical UIStackView

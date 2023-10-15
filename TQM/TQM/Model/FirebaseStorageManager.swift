@@ -14,9 +14,10 @@ class FirebaseStorageManager {
 
     private let storage = Storage.storage().reference()
     
+    let maxSize: Int64 = 10 * 1024 * 1024 // 10MB
     func downloadImage(from path: String, completion: @escaping (UIImage?) -> Void) {
         let imageRef = storage.child(path)
-        imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+        imageRef.getData(maxSize: maxSize) { data, error in
             if let error = error {
                 print("Error downloading image: \(error.localizedDescription)")
                 completion(nil)
