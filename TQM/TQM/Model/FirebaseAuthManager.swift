@@ -15,6 +15,7 @@ class FirebaseAuthManager {
     // Sign Up User
     func signUp(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            print("Sign up sent")
             if let error = error {
                 completion(false, error)
             } else {
@@ -26,7 +27,9 @@ class FirebaseAuthManager {
     // Log in with email + password
     func login(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            print("Login sent")
             if let error = error {
+                print(error)
                 completion(false, error)
             } else {
                 completion(true, nil)

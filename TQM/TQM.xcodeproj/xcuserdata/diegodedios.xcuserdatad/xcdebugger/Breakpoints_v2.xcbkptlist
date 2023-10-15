@@ -60,10 +60,138 @@
             filePath = "TQM/Controller/AuthViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "openGallery()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53DC5398-387E-4357-8E5C-44AD91075CF1 - 1a355e8e5d13f111"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TQM.AuthViewController.openGallery() -&gt; ()"
+                  moduleName = "TQM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "53DC5398-387E-4357-8E5C-44AD91075CF1 - 1a355e8e5d13f111"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TQM.AuthViewController.openGallery() -&gt; ()"
+                  moduleName = "TQM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BFAA93B-4BCA-4134-8304-B8768A9FACB0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TQM/Controller/AuthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "submitBtnOnClick(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9BFAA93B-4BCA-4134-8304-B8768A9FACB0 - bfaf7a9bb0115d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TQM.AuthViewController.submitBtnOnClick(__C.UIButton) -&gt; ()"
+                  moduleName = "TQM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "9BFAA93B-4BCA-4134-8304-B8768A9FACB0 - bfaf7a9bb0115d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TQM.AuthViewController.submitBtnOnClick(__C.UIButton) -&gt; ()"
+                  moduleName = "TQM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "360">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A975C4B-0658-4B37-ADFB-416C25DED7B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TQM/Controller/AuthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "submitBtnOnClick(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A975C4B-0658-4B37-ADFB-416C25DED7B8 - bfaf7a9bb0115ea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TQM.AuthViewController.submitBtnOnClick(__C.UIButton) -&gt; ()"
+                  moduleName = "TQM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "7A975C4B-0658-4B37-ADFB-416C25DED7B8 - bfaf7a9bb0115ea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TQM.AuthViewController.submitBtnOnClick(__C.UIButton) -&gt; ()"
+                  moduleName = "TQM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegodedios/Projects/HackGT/shipp/TQM/TQM/Controller/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

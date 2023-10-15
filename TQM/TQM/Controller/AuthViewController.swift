@@ -11,8 +11,30 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var isSignIn: Bool = true
     
-    // Action for Sign Up button
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        imagePicker.delegate = self
+        hideshow.isHidden = true
+        addLineToButton(button: signInTab, color: UIColor(hex: "F66C72"))
+    }
+    
+    @IBOutlet var signInTab: UIButton!
+    @IBOutlet var signUpTab: UIButton!
+    
+    @IBAction func submitBtnOnClick(_ sender: UIButton) {
+        print(isSignIn)
+        if isSignIn {
+            loginButtonTapped(sender)
+        } else {
+            signUpButtonTapped(sender)
+        }
+    }
+    
+    // Action for Sign Up Submit button
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         
@@ -30,20 +52,75 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    // Login Submit
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+            guard let email = emailTextField.text, let password = passwordTextField.text else {
+                // Handle empty email or password fields
+                return
+            }
+            
+        FirebaseAuthManager.shared.login(email: email, password: password) { (success, error) in
+                if success {
+                    // Successfully logged in
+                    // Navigate to the main app screen or show a success message
+                    print("Success!")
+
+                } else {
+                    // Handle error
+                    if let error = error {
+                        print("Error logging in: \(error.localizedDescription)")
+                        // Optionally, show an error message to the user
+                    }
+                }
+            }
+        }
+    
     
     @IBOutlet var hideshow: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        imagePicker.delegate = self
-        hideshow.isHidden = true
+    // Tabs
+    // Tabs
+    @IBAction func onSignUpTabClick(_ sender: UIButton) {
+        if sender == signInTab {
+            isSignIn = true
+            hideshow.isHidden = true
+            addLineToButton(button: signInTab, color: UIColor(hex: "F66C72"))
+            removeLineFromButton(button: signUpTab)
+        } else {
+            isSignIn = false
+            hideshow.isHidden = false
+            addLineToButton(button: signUpTab, color: UIColor(hex: "F66C72"))
+            removeLineFromButton(button: signInTab)
+        }
+        print(isSignIn)
     }
     
-    // Tabs
-    @IBAction func onSignUpTabClick(_ sender: Any) {
-        hideshow.isHidden = !hideshow.isHidden
+    func removeLineFromButton(button: UIButton) {
+        button.subviews.forEach {
+            if $0.tag == 1001 {
+                $0.removeFromSuperview()
+            }
+        }
     }
+    
+    func addLineToButton(button: UIButton, color: UIColor) {
+        // Remove any existing line
+        button.subviews.forEach {
+            if $0.tag == 1001 {
+                $0.removeFromSuperview()
+            }
+        }
+        
+        // Create a new line view
+        let lineView = UIView(frame: CGRect(x: 0, y: button.bounds.height, width: button.bounds.width, height: 2))
+        lineView.backgroundColor = color
+        lineView.tag = 1001  // Tag to identify the line view later
+        button.addSubview(lineView)
+    }
+
+
+    
+    
         
     // Image picker
     let imagePicker = UIImagePickerController()
@@ -97,3 +174,19 @@ class AuthViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
 
 
+extension UIColor {
+    convenience init(hex: String) {
+        let scanner = Scanner(string: hex)
+        scanner.scanLocation = 0
+        
+        var rgb: UInt64 = 0
+        
+        scanner.scanHexInt64(&rgb)
+        
+        let r = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+        let g = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+        let b = CGFloat(rgb & 0x0000FF) / 255.0
+        
+        self.init(red: r, green: g, blue: b, alpha: 1.0)
+    }
+}

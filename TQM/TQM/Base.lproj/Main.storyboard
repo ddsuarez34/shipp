@@ -117,7 +117,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SUBMIT"/>
                                 <connections>
-                                    <action selector="signUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWu-gt-sE1"/>
+                                    <action selector="submitBtnOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L36-Lp-sXA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,6 +144,8 @@
                         <outlet property="hideshow" destination="hq8-wZ-O1k" id="KfH-pQ-Fqv"/>
                         <outlet property="passwordTextField" destination="Ugl-aL-3sq" id="qmv-WN-IcT"/>
                         <outlet property="pickedImageView" destination="iuJ-TQ-IiB" id="tCo-hn-IEb"/>
+                        <outlet property="signInTab" destination="4sq-Iz-BJJ" id="vbx-ZQ-P6i"/>
+                        <outlet property="signUpTab" destination="GvM-ik-8AJ" id="RfG-qO-hVT"/>
                         <segue destination="z0I-QU-qdG" kind="show" id="gcQ-ad-nAO"/>
                     </connections>
                 </viewController>
