@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7YE-oR-he7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TWv-Sv-vtI">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="JQd-xj-apH">
-                                <rect key="frame" x="92.333333333333329" y="102.99999999999999" width="245.33333333333337" height="207.66666666666663"/>
+                                <rect key="frame" x="92.333333333333329" y="58.999999999999986" width="245.33333333333337" height="207.66666666666663"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-pt-zph">
-                                <rect key="frame" x="102.66666666666669" y="320.66666666666669" width="225" height="34.333333333333314"/>
+                                <rect key="frame" x="102.66666666666669" y="276.66666666666669" width="225" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sq-Iz-BJJ">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="34.333333333333336"/>
@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="1b1-7u-8JP">
-                                <rect key="frame" x="73" y="365" width="284" height="336"/>
+                                <rect key="frame" x="73" y="321" width="284" height="336"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgX-og-gUE">
                                         <rect key="frame" x="0.0" y="0.0" width="284" height="34"/>
@@ -146,7 +146,6 @@
                         <outlet property="pickedImageView" destination="iuJ-TQ-IiB" id="tCo-hn-IEb"/>
                         <outlet property="signInTab" destination="4sq-Iz-BJJ" id="vbx-ZQ-P6i"/>
                         <outlet property="signUpTab" destination="GvM-ik-8AJ" id="RfG-qO-hVT"/>
-                        <segue destination="z0I-QU-qdG" kind="show" id="gcQ-ad-nAO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,23 +168,20 @@
             </objects>
             <point key="canvasLocation" x="2130.6976744186045" y="-27.038626609442062"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="J8s-qJ-gKb">
+        <!--Gallery View Controller-->
+        <scene sceneID="f4N-xm-2kb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7YE-oR-he7" customClass="NavigationController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3fY-uy-gXN">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cwh-R3-VNE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IBj-fa-3FT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="TWv-Sv-vtI" customClass="GalleryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nBC-ne-cuo">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qCa-iQ-NYY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLg-T5-zxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30.697674418604652" y="-28.326180257510732"/>
+            <point key="canvasLocation" x="2131" y="-718"/>
         </scene>
     </scenes>
     <resources>
